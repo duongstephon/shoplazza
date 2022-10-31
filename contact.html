@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Places Search Box</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- playground-hide -->
+    <script>
+        const process = { env: {} };
+        process.env.GOOGLE_MAPS_API_KEY =
+            "AIzaSyA0mRTLD2mIfp5s08IvPWjs14o7rgpZwwA";
+    </script>
+    <!-- playground-hide-end -->
+
+    <link rel="stylesheet" type="text/css" href="./contact.css" />
+    <script type="module" src="./contact.ts"></script>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label>Name</label>
+            <input type='text' />
+        </div>
+        <div>
+            <label>Email</label>
+            <input type='text' />
+        </div>
+        <div>
+            <label>Subject</label>
+            <input type='text' />
+        </div>
+        <div>
+            <label>Message</label>
+            <input type='text' />
+        </div>
+    </form>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
+    <iframe id="map" width="300px" height="300px"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0mRTLD2mIfp5s08IvPWjs14o7rgpZwwA&callback=initAutocomplete&libraries=places&v=weekly"
+        defer>
+    </iframe>
+
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+</body>
+</html>
