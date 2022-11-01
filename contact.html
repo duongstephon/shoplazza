@@ -17,29 +17,35 @@
 </head>
 
 <body>
-    <form>
-        <div>
-            <label>Name</label>
-            <input type='text' />
+    <div class="form-section">
+    <h3 class="contact-title">Contact Us</h3>
+    <form class="form">
+        <div class="section">
+            <label class="label">Name</label>
+            <input class='input' type='text' placeholder="Name"/>
         </div>
-        <div>
-            <label>Email</label>
-            <input type='text' />
+        <div class="section">
+            <label class="label">Email</label>
+            <input class='input'  type='text' placeholder="Email"/>
         </div>
-        <div>
-            <label>Subject</label>
-            <input type='text' />
+        <div class="section">
+            <label class="label">Subject</label>
+            <input class='input' type='text' placeholder="Subject"/>
         </div>
-        <div>
-            <label>Message</label>
-            <input type='text' />
+        <div class="section">
+            <label class="label">Message</label>
+            <textarea class='input' type='text' rows="8" placeholder="Message"></textarea>
         </div>
     </form>
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
-    <iframe id="map" width="300px" height="300px"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0mRTLD2mIfp5s08IvPWjs14o7rgpZwwA&callback=initAutocomplete&libraries=places&v=weekly"
-        defer>
-    </iframe>
+    </div>
+    <div class="map-section">
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
+        <iframe id="map" width="300px" height="300px"
+            async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0mRTLD2mIfp5s08IvPWjs14o7rgpZwwA&callback=initAutocomplete&libraries=places&v=weekly">
+        </iframe>
+        <div id="map"></div>
+    </div>
 
     <!-- 
      The `defer` attribute causes the callback to execute after the full HTML
@@ -48,4 +54,5 @@
      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
     -->
 </body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0mRTLD2mIfp5s08IvPWjs14o7rgpZwwA&callback=initAutocomplete&libraries=places&v=weekly"></script>
 </html>

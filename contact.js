@@ -56,4 +56,5 @@ function initAutocomplete() {
         map.fitBounds(bounds);
     });
 }
+
 window.initAutocomplete = initAutocomplete;
